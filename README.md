@@ -1,5 +1,5 @@
 ## About The Project
-Retrieve global weather data from OpenWeather API to display the weather details for a specific city based on the user request using React.
+Retrieve global weather data from OpenWeather API to display the weather details for a specific city based on the user request, Built using Reactjs.
 
 ## Link
 https://hackyourweather-application.netlify.app/
