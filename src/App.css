@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 html, body, #root{
     background:url("images/background.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -43,17 +51,43 @@ html, body, #root{
     border-radius: 5px;
 }
 
+.city-card-link{
+    width: 500px;
+    height: 205px;
+    border-radius: 5px;
+    color: white;
+}
+
+.city-card-link:hover{
+    background-color: rgba(155, 155, 155, 0.486)
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
 .card-section {
     padding: 10px;
     display: block;
+
 }
 
 h1{
     font-size: 50px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 h4{
     font-size: 14px;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+p{
+    color:#8884d8;
 }
 
 .loading-img{
@@ -78,7 +112,6 @@ h4{
 
     width: 30px;
     height: 30px;
-    cursor: pointer;
     float: right;
 }
 
@@ -165,6 +198,32 @@ h4{
 .search-button:hover{
     color: black;
     transition: all .3s ease-in;
+}
+
+.chart {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 150px;
+}
+
+.recharts-surface{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.backButton{
+    background-color: #8884d8;
+    border: none;
+    color: white;
+    margin: 10px;
+    padding: 15px 32px 15px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 @media only screen and (orientation:portrait)

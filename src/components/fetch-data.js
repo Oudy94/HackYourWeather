@@ -1,14 +1,11 @@
-import {useEffect, useState, useRef} from 'react';
+import {useEffect, useState} from 'react';
 
 function useFetch(url) {
     const [data, setData] = useState([]);
     const [hasError, setHasError] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
-    const didMount = useRef(false);
-
     useEffect(() => {
-        if (didMount.current){
             if(url){
                 (async () => {
                     setIsLoading(true);
@@ -25,6 +22,7 @@ function useFetch(url) {
                         }
                     }
                     catch (error) {
+                        console.log(error);
                         setHasError(true);
                     }
                     finally{
@@ -32,10 +30,6 @@ function useFetch(url) {
                     }
                 })();
             }
-        }
-        else{
-            didMount.current = true;
-        }
     }, [url]);
 
     return {data, isLoading, hasError};
