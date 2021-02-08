@@ -22,7 +22,7 @@ function WeatherChart() {
     return (
         <div className="chart">
             {isLoading && <img src={loadingImage} alt="loading" className="loading-img" />}
-            {data.list && <h1>Cast for {data.city.name}</h1>}
+            {data.list && <h1>5 days forecast for {data.city.name}</h1>}
             <AreaChart width={730} height={250} data={chartData}
                 margin={{ top: 20, right: 30, bottom: 5, left: 0 }}>
                 <defs>
